@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Li-Fi Data Transmission</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        .hero-bg { background-color: #111827; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Name -->
+            <a href="index.html" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                [Your Name] // Robotics
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#home" class="hover:text-indigo-400 transition-colors duration-300">Home</a>
+                <a href="index.html#experience" class="hover:text-indigo-400 transition-colors duration-300">Experience</a>
+                <a href="index.html#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                <a href="index.html#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
+                <a href="index.html#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <a href="index.html#home" class="block py-2 px-6 text-center hover:bg-gray-800">Home</a>
+            <a href="index.html#experience" class="block py-2 px-6 text-center hover:bg-gray-800">Experience</a>
+            <a href="index.html#projects" class="block py-2 px-6 text-center hover:bg-gray-800">Projects</a>
+            <a href="index.html#about" class="block py-2 px-6 text-center hover:bg-gray-800">About</a>
+            <a href="index.html#contact" class="block py-2 px-6 text-center hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <a href="index.html#projects" class="text-indigo-300 hover:text-indigo-100 transition-colors">&larr; Back to All Projects</a>
+                <h1 class="text-4xl md:text-6xl font-extrabold my-4 leading-tight">
+                    Light-Based Data Transmission (Li-Fi)
+                </h1>
+                <p class="text-lg md:text-2xl text-indigo-200">
+                    An optical wireless communication system to transmit text data using visible light (LED) to a solar cell.
+                </p>
+            </div>
+        </section>
+
+        <!-- Project Details -->
+        <section class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6 max-w-5xl">
+                
+                <!-- Hero Image -->
+                <img src="project4.png" alt="Li-Fi Project Image" class="rounded-xl shadow-2xl mb-16 w-full">
+
+                <!-- Demo Video -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Demo Video</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Video demonstration of text being transmitted via LED and displayed on the receiver's LCD.
+                    </p>
+                    <div class="relative rounded-xl shadow-lg overflow-hidden border" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/QjGDJaWciqk" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        This project demonstrates a proof-of-concept for an optical wireless communication system capable of transmitting and receiving text data using visible light. The transmitter module encodes text data into a serial bit stream by blinking an LED, while the receiver module decodes the light signal using a solar cell and reconstructs the original text data.
+                    </p>
+                    
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/sudhanshur555/Data-Transmission-via-Li-Fi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.25 10.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm-1.06 4.28a.75.75 0 0 0-1.06 1.06c.66.66 1.519 1.12 2.53 1.39a.75.75 0 0 0 .84-1.09 3.752 3.752 0 0 1-2.25-1.58c-.14-.25-.33-.48-.56-.7Z" clip-rule="evenodd" /><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM10.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.94 4.28a.75.75 0 0 0-1.06-1.06 3.752 3.752 0 0 1-2.25 1.58.75.75 0 0 0 .84 1.09c1.011-.27 1.87-.73 2.53-1.39.23-.22.42-.45.56-.7Z" /></svg>
+                        View Project on GitHub
+                    </a>
+                </div>
+
+                <!-- Components -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Components Used</h2>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>2 x Arduino Uno boards</li>
+                            <li>2 x Solderless Breadboard</li>
+                            <li>1 x 5mm White LED</li>
+                            <li>1 x Solar Cell (or Photo-resistor)</li>
+                            <li>1 x 16x2 LCD Display with I2C interface</li>
+                            <li>Jumper wires & Power Supply</li>
+                            <li>(Optional) Resistors, capacitors for solar cell amplifier circuit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Working Principle -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Working Principle</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Transmitter -->
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-semibold mb-4">Transmitter</h3>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li>Reads a predefined text string from memory.</li>
+                                <li>Converts each character into its 8-bit ASCII binary representation.</li>
+                                <li>Turns the LED on and off rapidly to transmit each bit serially.</li>
+                                <li>Adds a start bit (LED off) and a stop bit (LED on) to each byte for synchronization.</li>
+                                <li>Transmits the entire string repeatedly in a loop.</li>
+                                <li><b>Baud Rate:</b> ~100 bits/second (1200 baud).</li>
+                            </ol>
+                        </div>
+                        <!-- Receiver -->
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-semibold mb-4">Receiver</h3>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li>Solar cell generates a varying analog voltage based on received light.</li>
+                                <li>Arduino monitors this voltage using its Analog-to-Digital Converter (ADC).</li>
+                                <li>Voltage levels are sampled at the specified baud rate.</li>
+                                <li>Sampled bits are reconstructed into bytes by detecting start/stop bits.</li>
+                                <li>Received bytes are interpreted as ASCII characters.</li>
+                                <li>Valid characters are displayed on the 16x2 LCD screen.</li>
+                                <li><b>Sampling Rate:</b> 200 samples/second.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Circuit Diagram</h2>
+                    <p class="text-lg text-gray-700 mb-6">Diagram showing the transmitter (LED) and receiver (Solar Cell + LCD) circuits.</p>
+                    <div class="grid grid-cols-1 gap-6">
+                        <img src="https://placehold.co/1200x600/312e81/ffffff?text=Li-Fi+Circuit+Diagram" alt="Circuit Diagram" class="rounded-lg shadow-lg border">
+                    </div>
+                </div>
+
+                <!-- Installation -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Installation and Usage</h2>
+                    <ol class="list-decimal list-inside space-y-2 text-lg text-gray-700">
+                        <li>Connect components as per the circuit diagram.</li>
+                        <li>Upload `transmitter.ino` and `receiver.ino` to their respective Arduino boards.</li>
+                        <li>Open the Serial Monitor on the receiver side for debugging.</li>
+                        <li>The transmitted text should be displayed on the LCD screen in real-time.</li>
+                        <li><b>Note:</b> Requires a clear line of sight and minimal ambient light interference.</li>
+                    </ol>
+                </div>
+
+                <!-- Limitations -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Limitations and Challenges</h2>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li><b>Limited range:</b> Short effective range due to LED brightness and solar cell sensitivity.</li>
+                        <li><b>Ambient light interference:</b> Sunlight and lamps can introduce noise and corrupt data.</li>
+                        <li><b>Baud rate limitations:</b> Constrained by LED switching speed and receiver sampling rate.</li>
+                        <li><b>Unidirectional communication:</b> Only supports one-way (transmitter to receiver) data flow.</li>
+                        <li><b>Line of Sight (LOS):</b> Li-Fi requires a direct, unobstructed path between transmitter and receiver.</li>
+                    </ul>
+                </div>
+                
+                <!-- Future Improvements -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Future Improvements</h2>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li>Implement error detection/correction (e.g., parity bits, checksums).</li>
+                        <li>Add support for transmitting larger files using buffering and packets.</li>
+                        <li>Experiment with lasers and photodiodes for improved range and data rates.</li>
+                        <li>Explore modulation techniques (e.g., AM, FM) for more efficient encoding.</li>
+                        <li>Implement bi-directional (full-duplex) communication.</li>
+                        <li>Enhance the UI to allow user input for the text to be transmitted.</li>
+                        <li>Implement automatic baud rate detection and synchronization.</li>
+                    </ul>
+                </div>
+
+                <!-- Contributors -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Contributors & Credits</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        This project was developed by Sudhanshu Ranjan, Vinay Kumar, Sarthak Kumar, and Ujjwal Kumar as part of a 5th-semester Communication Lab project.
+                    </p>
+                    <p class="text-base text-gray-600">
+                        The code is based on examples from the Arduino community and various online resources.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+            <p class="text-sm">Built with HTML, Tailwind CSS, and lots of ☕.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

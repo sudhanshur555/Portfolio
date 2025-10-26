@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Swift Pico Drone Navigation (e-Yantra)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        .hero-bg { background-color: #111827; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Name -->
+            <a href="index.html" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                Sudhanshu Ranjan // Robotics
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#home" class="hover:text-indigo-400 transition-colors duration-300">Home</a>
+                <a href="index.html#experience" class="hover:text-indigo-400 transition-colors duration-300">Experience</a>
+                <a href="index.html#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                <a href="index.html#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
+                <a href="index.html#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <a href="index.html#home" class="block py-2 px-6 text-center hover:bg-gray-800">Home</a>
+            <a href="index.html#experience" class="block py-2 px-6 text-center hover:bg-gray-800">Experience</a>
+            <a href="index.html#projects" class="block py-2 px-6 text-center hover:bg-gray-800">Projects</a>
+            <a href="index.html#about" class="block py-2 px-6 text-center hover:bg-gray-800">About</a>
+            <a href="index.html#contact" class="block py-2 px-6 text-center hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <a href="index.html#projects" class="text-indigo-300 hover:text-indigo-100 transition-colors">&larr; Back to All Projects</a>
+                <h1 class="text-4xl md:text-6xl font-extrabold my-4 leading-tight">
+                    Swift Pico Drone Navigation & Inventory Validation (e-Yantra)
+                </h1>
+                <p class="text-lg md:text-2xl text-indigo-200">
+                    Autonomous drone navigation in Gazebo using ROS 2, OpenCV, and custom action servers for inventory validation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Project Details -->
+        <section class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6 max-w-5xl">
+                
+                <!-- Hero Image - REMOVED -->
+                <!-- 
+                <img src="https://placehold.co/1200x600/1d4ed8/ffffff?text=e-Yantra+Warehouse+Drone" alt="Warehouse Drone Project" class="rounded-xl shadow-2xl mb-16 w-full"> 
+                -->
+
+                <!-- Demo Video -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Demo Video</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Project demonstration video showing the drone navigating the simulated warehouse environment.
+                    </p>
+                    <div class="relative rounded-xl shadow-lg overflow-hidden border" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/qc9E1J1uffk?start=173" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        This project involves autonomous navigation and inventory validation using the Swift Pico Drone in a simulated warehouse environment built with Gazebo. The drone utilizes ROS2 for real-time communication and control, enabling precise movement, collision avoidance, and package identification. This work extends across multiple tasks involving 2D mapping, path planning, and validation of packages at known locations.
+                    </p>
+                    
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/sudhanshur555/Eyantra_Warehouse-Drone/tree/main" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.25 10.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm-1.06 4.28a.75.75 0 0 0-1.06 1.06c.66.66 1.519 1.12 2.53 1.39a.75.75 0 0 0 .84-1.09 3.752 3.752 0 0 1-2.25-1.58c-.14-.25-.33-.48-.56-.7Z" clip-rule="evenodd" /><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM10.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.94 4.28a.75.75 0 0 0-1.06-1.06 3.752 3.752 0 0 1-2.25 1.58.75.75 0 0 0 .84 1.09c1.011-.27 1.87-.73 2.53-1.39.23-.22.42-.45.56-.7Z" /></svg>
+                        View Project on GitHub
+                    </a>
+                </div>
+
+                <!-- Technical Stack & Features -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Technical Deep Dive</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4">Key Features</h3>
+                            <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
+                                <li><strong>2D Mapping:</strong> Uses Aruco markers to generate a 2D bitmap of the warehouse for path planning.</li>
+                                <li><strong>Autonomous Navigation:</strong> Custom ROS 2 action server for waypoint navigation with real-time error checking (±0.6m).</li>
+                                <li><strong>Inventory Validation:</strong> Conducts package identification with stable hovering for 3 seconds at each location.</li>
+                                <li><strong>ROS 2 Comms:</strong> Utilizes custom services and action clients/servers for managing waypoints and path planning.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4">Task Workflow</h3>
+                            <ul class="list-decimal list-inside space-y-2 text-lg text-gray-700">
+                                <li><strong>Task 2A:</strong> Waypoint navigation in Gazebo simulation.</li>
+                                <li><strong>Task 2B:</strong> Path planning using Aruco-based 2D mapping.</li>
+                                <li><strong>Task 2C:</strong> Inventory validation with package detection and hovering at predefined points.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-4">Project Structure</h3>
+                        <div class="bg-gray-800 text-gray-200 p-6 rounded-xl shadow-lg font-mono text-sm overflow-x-auto">
+<pre><code>swift_pico_project/
+├── src/
+│   ├── warehouse_service.py    # Service for path planning
+│   ├── pico_server_2c.py       # Action server for waypoint navigation
+│   ├── pico_client_2c.py       # Action client to send waypoints
+│   ├── path_planning_service.py# Path planning for warehouse
+│   └── waypoint_service.py     # Manages waypoints
+├── models/
+│   └── swift_pico_description/ # 3D models and URDF files
+├── launch/
+│   └── task_2c.launch.py       # Launch file for Gazebo
+└── README.md</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-4">Technical Highlights</h3>
+                        <div class="bg-gray-50 p-8 rounded-xl shadow-lg border">
+                            <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                                <li><strong>ROS 2 Communication:</strong> Custom service and action interfaces for waypoint retrieval, path planning, and navigation feedback.</li>
+                                <li><strong>Gazebo Integration:</strong> Simulates warehouse environment and Swift Pico model for realistic testing.</li>
+                                <li><strong>Collision and Error Checking:</strong> Monitors potential collisions and height violations throughout navigation.</li>
+                                <li><strong>Results:</strong> The drone successfully navigates, hovers at each package location, and maintains stable flight within defined error margins.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-4">Prerequisites & Setup</h3>
+                        <p class="text-lg text-gray-700 mb-4">The project requires ROS 2, Python 3.8+, Gazebo, OpenCV, and WhyCon for height stabilization.</p>
+                        <div class="bg-gray-800 text-gray-200 p-6 rounded-xl shadow-lg font-mono text-sm overflow-x-auto">
+<pre><code># 1. Clone the repository
+git clone https://github.com/sudhanshur555/Eyantra_Warehouse-Drone.git
+cd Eyantra_Warehouse-Drone
+
+# 2. Install Dependencies
+sudo apt install ros-&lt;distro&gt;-gazebo-ros-pkgs python3-opencv
+
+# 3. Set Up Environment
+export GZ_SIM_RESOURCE_PATH="$HOME/Eyantra_Warehouse-Drone/models"
+
+# 4. Build the Workspace
+colcon build
+source install/setup.bash</code></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Usage (Simulation Launch)</h3>
+                        <p class="text-lg text-gray-700 mb-4">In separate terminals, start the simulation, service, server, and client nodes:</p>
+                        <div class="bg-gray-800 text-gray-200 p-6 rounded-xl shadow-lg font-mono text-sm overflow-x-auto">
+<pre><code># Terminal 1: Launch Simulation
+ros2 launch swift_pico task_2c.launch.py
+
+# Terminal 2: Warehouse Service
+ros2 run swift_pico warehouse_service.py
+
+# Terminal 3: Action Server
+ros2 run swift_pico pico_server_2c.py
+
+# Terminal 4: Action Client
+ros2 run swift_pico pico_client_2c.py</code></pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sudhanshu Ranjan. All rights reserved.</p>
+            <p class="text-sm">Built with HTML, Tailwind CSS, and lots of ☕.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
+

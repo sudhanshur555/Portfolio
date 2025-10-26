@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Indoor Navigation Bot (MyBot)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        .hero-bg { background-color: #111827; }
+        /* Style for code blocks */
+        pre {
+            background-color: #1f2937; /* gray-800 */
+            color: #d1d5db; /* gray-300 */
+            padding: 1.5rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        pre code {
+            font-family: inherit;
+        }
+        /* Comment style in code */
+        pre .comment {
+            color: #9ca3af; /* gray-400 */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Name -->
+            <a href="index.html" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                [Your Name] // Robotics
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#home" class="hover:text-indigo-400 transition-colors duration-300">Home</a>
+                <a href="index.html#experience" class="hover:text-indigo-400 transition-colors duration-300">Experience</a>
+                <a href="index.html#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                <a href="index.html#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
+                <a href="index.html#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <a href="index.html#home" class="block py-2 px-6 text-center hover:bg-gray-800">Home</a>
+            <a href="index.html#experience" class="block py-2 px-6 text-center hover:bg-gray-800">Experience</a>
+            <a href="index.html#projects" class="block py-2 px-6 text-center hover:bg-gray-800">Projects</a>
+            <a href="index.html#about" class="block py-2 px-6 text-center hover:bg-gray-800">About</a>
+            <a href="index.html#contact" class="block py-2 px-6 text-center hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <a href="index.html#projects" class="text-indigo-300 hover:text-indigo-100 transition-colors">&larr; Back to All Projects</a>
+                <h1 class="text-4xl md:text-6xl font-extrabold my-4 leading-tight">
+                    Indoor Navigation Bot (MyBot)
+                </h1>
+                <p class="text-lg md:text-2xl text-indigo-200">
+                    A differential drive mobile robot built for autonomous navigation and SLAM using ROS 2.
+                </p>
+            </div>
+        </section>
+
+        <!-- Project Details -->
+        <section class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6 max-w-5xl">
+                
+                <!-- Hero Image -->
+                <img src="project2.jpeg" alt="Bot Image" class="rounded-xl shadow-2xl mb-16 w-full">
+
+                <!-- Demo Video -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Demo Video</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Here you can see the robot mapping an environment in real-time and then autonomously navigating to a goal.
+                    </p>
+                    <!-- 
+                        HOW TO:
+                        1. Go to your YouTube video.
+                        2. Click "Share".
+                        3. Click "Embed".
+                        4. Copy the 'src' URL (e.g., "https-://www.youtube.com/embed/dQw4w9WgXcQ")
+                        5. Replace the 'src' URL below with yours.
+                    -->
+                    <div class="relative rounded-xl shadow-lg overflow-hidden border" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/SLRAsSv7wkM?si=izUSGaQo-ks3dkL5" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        This repository contains the complete ROS 2 workspace for MyBot, a differential drive mobile robot built for autonomous navigation and SLAM.
+                    </p>
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/sudhanshur555/Indoor_navigation_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.25 10.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm-1.06 4.28a.75.75 0 0 0-1.06 1.06c.66.66 1.519 1.12 2.53 1.39a.75.75 0 0 0 .84-1.09 3.752 3.752 0 0 1-2.25-1.58c-.14-.25-.33-.48-.56-.7Z" clip-rule="evenodd" /><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM10.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.94 4.28a.75.75 0 0 0-1.06-1.06 3.752 3.752 0 0 1-2.25 1.58.75.75 0 0 0 .84 1.09c1.011-.27 1.87-.73 2.53-1.39.23-.22.42-.45.56-.7Z" /></svg>
+                        View Project on GitHub
+                    </a>
+                </div>
+
+                <!-- Features -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Key Features</h2>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li><b>Full Robot Bringup:</b> Launch files to bring the robot hardware, sensors, and software stack online.</li>
+                        <li><b>SLAM:</b> Real-time map building using `slam_toolbox`.</li>
+                        <li><b>Localization:</b> EKF-based sensor fusion for accurate odometry using `robot_localization`.</li>
+                        <li><b>Web-Based Tuning:</b> The motor controller (ESP32) hosts a webpage for real-time PID tuning without re-flashing.</li>
+                        <li><b>Navigation:</b> Full autonomous navigation with the ROS 2 Nav2 stack.</li>
+                        <li><b>Simulation:</b> Complete Gazebo simulation model and launch files for testing and development.</li>
+                    </ul>
+                </div>
+
+                <!-- Technology Stack -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Technology Stack</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Hardware -->
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-semibold mb-4">Hardware</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><b>Chassis:</b> Custom 3D Printed</li>
+                                <li><b>Compute (On-board):</b> Raspberry Pi 4 (4GB)</li>
+                                <li><b>Microcontroller:</b> ESP32 (Motor controller & encoder)</li>
+                                <li><b>Motors:</b> DC Motors with Encoders</li>
+                                <li><b>Motor Driver:</b> L298N</li>
+                                <li><b>Sensors (IMU):</b> MPU-6050 / BNO085</li>
+                                <li><b>Sensors (LiDAR):</b> RPLidar A1</li>
+                                <li><b>Power:</b> 12V LiPo Battery + 5V Buck Converter</li>
+                            </ul>
+                        </div>
+                        <!-- Software -->
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-semibold mb-4">Software</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><b>OS:</b> Ubuntu 22.04</li>
+                                <li><b>ROS 2:</b> ROS 2 Humble Hawksbill</li>
+                                <li><b>Primary Languages:</b> Python and C++</li>
+                                <li><b>Firmware:</b> ESP32 w/ WiFi web server for on-the-fly PID tuning.</li>
+                                <li><b>Key ROS 2 Packages:</b>
+                                    <ul class="list-['-_'] list-inside ml-4">
+                                        <li>slam_toolbox</li>
+                                        <li>robot_localization (EKF)</li>
+                                        <li>nav2_stack</li>
+                                        <li>ros2_control</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workspace Structure -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">ROS 2 Workspace Structure</h2>
+                    <p class="text-lg text-gray-700 mb-6">This workspace is organized into several custom ROS 2 packages:</p>
+                    <div class="shadow-lg rounded-xl overflow-hidden border">
+                        <table class="w-full">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-4 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">Package</th>
+                                    <th class="p-4 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_bringup</td><td class="p-4 text-gray-700">Contains all top-level launch files for starting the robot.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_description</td><td class="p-4 text-gray-700">Holds the robot's URDF (Unified Robot Description Format) files.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_firmware</td><td class="p-4 text-gray-700">Code for the microcontroller and the `ros2_control` hardware interface.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_controller</td><td class="p-4 text-gray-700">`ros2_control` controller configurations and custom controller code.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_localization</td><td class="p-4 text-gray-700">EKF configuration files for `robot_localization`.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_mapping</td><td class="p-4 text-gray-700">Configuration and launch files for `slam_toolbox`.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_planning</td><td class="p-4 text-gray-700">Nav2 stack configuration files (planners, controllers, BT).</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_msgs</td><td class="p-4 text-gray-700">Custom ROS 2 message and service definitions.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_utils</td><td class="p-4 text-gray-700">Contains utility scripts and nodes used by other packages.</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_calibration</td><td class="p-4 text-gray-700">Scripts for sensor calibration (e.g., IMU, camera).</td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-4 font-mono text-gray-700">mybot_motion</td><td class="p-4 text-gray-700">High-level motion logic (e.g., "go to goal").</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Installation & Setup -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Installation & Setup</h2>
+                    <p class="text-lg text-gray-700 mb-4">These are the steps to clone and build the project.</p>
+                    
+                    <h3 class="text-2xl font-semibold mb-3">1. Prerequisites</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                        <li>A computer with Ubuntu 22.04 installed.</li>
+                        <li>ROS 2 Humble (Desktop Install).</li>
+                        <li>Git and colcon.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold mb-3">2. Clone & Build</h3>
+<pre><code><span class="comment"># 1. Create a new ROS 2 workspace</span>
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+
+<span class="comment"># 2. Clone this repository</span>
+git clone https://github.com/sudhanshur555/Indoor_navigation_bot.git
+
+<span class="comment"># 3. Go back to the workspace root</span>
+cd ~/ros2_ws
+
+<span class="comment"># 4. Install dependencies from ROS packages</span>
+rosdep install --from-paths src -y -i
+
+<span class="comment"># 5. Build the workspace</span>
+colcon build
+
+<span class="comment"># 6. Source the workspace</span>
+source install/setup.bash
+
+<span class="comment"># 7. Launch the project on real hardware</span>
+ros2 launch my_bot_bringup real_robot.launch.py use_slam:=true use_sim_time:=false</code></pre>
+                </div>
+
+                <!-- Gallery -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+                    <p class="text-lg text-gray-700 mb-6">More images of the build process, RViz simulations, and hardware.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <img src="https://placehold.co/600x400/0e7490/ffffff?text=Gazebo+Simulation" alt="Gazebo Simulation" class="rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/155e75/ffffff?text=RViz+Map+Building" alt="RViz Map Building" class="rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/0891b2/ffffff?text=Physical+Robot+Build" alt="Physical Robot" class="rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/065f46/ffffff?text=EKF+Localization" alt="Final Navigation Path" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+            <p class="text-sm">Built with HTML, Tailwind CSS, and lots of ☕.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+

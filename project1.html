@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Self Balancing Bot</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        .hero-bg { background-color: #111827; }
+        /* Style for code blocks (if needed later) */
+        pre {
+            background-color: #1f2937; /* gray-800 */
+            color: #d1d5db; /* gray-300 */
+            padding: 1.5rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        pre code {
+            font-family: inherit;
+        }
+        /* Comment style in code */
+        pre .comment {
+            color: #9ca3af; /* gray-400 */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Name -->
+            <a href="index.html" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                [Your Name] // Robotics
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#home" class="hover:text-indigo-400 transition-colors duration-300">Home</a>
+                <a href="index.html#experience" class="hover:text-indigo-400 transition-colors duration-300">Experience</a>
+                <a href="index.html#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                <a href="index.html#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
+                <a href="index.html#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <a href="index.html#home" class="block py-2 px-6 text-center hover:bg-gray-800">Home</a>
+            <a href="index.html#experience" class="block py-2 px-6 text-center hover:bg-gray-800">Experience</a>
+            <a href="index.html#projects" class="block py-2 px-6 text-center hover:bg-gray-800">Projects</a>
+            <a href="index.html#about" class="block py-2 px-6 text-center hover:bg-gray-800">About</a>
+            <a href="index.html#contact" class="block py-2 px-6 text-center hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <a href="index.html#projects" class="text-indigo-300 hover:text-indigo-100 transition-colors">&larr; Back to All Projects</a>
+                <h1 class="text-4xl md:text-6xl font-extrabold my-4 leading-tight">
+                    Self Balancing Bot
+                </h1>
+                <p class="text-lg md:text-2xl text-indigo-200">
+                    A two-wheeled robot that balances using a PID controller and is controlled by an Android app.
+                </p>
+            </div>
+        </section>
+
+        <!-- Project Details -->
+        <section class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6 max-w-5xl">
+                
+                <!-- Hero Image -->
+                <img src="project1.jpeg" alt="Robot Image" class="rounded-xl shadow-2xl mb-16 w-full">
+
+                <!-- Demo Video -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Demo Video</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Demo of the robot balancing and being controlled via the Android application.
+                    </p>
+                    <div class="relative rounded-xl shadow-lg overflow-hidden border" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/lqwXdpySzbQ" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                    
+                    <h3 class="text-2xl font-semibold mb-2">Aim</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        To balance a robot on two wheels at its normal position and control its movement through an Android app.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold mb-2">Introduction</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        The aim of this project is to make an automated vehicle that balances itself without any outside help or support. This project is a rather complex one as it involves using PID Control and involuted programming. Self-balancing robots are unique among all others, just because of their ability to balance on a given fixed position. Even if the robot is displaced from its position, it is programmed so that it again recovers its position.
+                    </p>
+
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/sudhanshur555/SelfBalancingBot-2022-23-Project" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-700 transition-colors shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.25 10.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm-1.06 4.28a.75.75 0 0 0-1.06 1.06c.66.66 1.519 1.12 2.53 1.39a.75.75 0 0 0 .84-1.09 3.752 3.752 0 0 1-2.25-1.58c-.14-.25-.33-.48-.56-.7Z" clip-rule="evenodd" /><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM10.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.94 4.28a.75.75 0 0 0-1.06-1.06 3.752 3.752 0 0 1-2.25 1.58.75.75 0 0 0 .84 1.09c1.011-.27 1.87-.73 2.53-1.39.23-.22.42-.45.56-.7Z" /></svg>
+                        View Project on GitHub
+                    </a>
+                </div>
+
+                <!-- Technology Stack -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Technology & Components</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Hardware -->
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-semibold mb-4">Hardware Components</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><b>MPU6050:</b> 3-axis accelerometer & gyroscope.</li>
+                                <li><b>Arduino Uno:</b> Main microcontroller board.</li>
+                                <li><b>Drv8825 Motor driver:</b> Micro-stepping motor driver.</li>
+                                <li><b>Stepper Motor:</b> NEMA 17 stepper motors.</li>
+                                <li><b>ESP32:</b> For Wi-Fi/Bluetooth communication.</li>
+                                <li><b>Li-polymer battery:</b> Power source.</li>
+                                <li><b>Jumper wires</b></li>
+                            </ul>
+                        </div>
+                        <!-- Software -->
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-semibold mb-4">Software & Concepts</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li><b>PID Control:</b> Core balancing algorithm.</li>
+                                <li><b>Kalman Filter:</b> Used to filter MPU6050 sensor data.</li>
+                                <li><b>TIMER Interrupt:</b> For precise PID loop timing (TIMER2).</li>
+                                <li><b>Bluetooth Communication:</b> For Android app control.</li>
+                                <li><b>Communication Protocol:</b> Serial and I2C.</li>
+                                <li><b>PORT Control:</b> Faster pin I/O than `digitalWrite()`.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role of Software -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Role of Software Components</h2>
+                    <div class="space-y-4 text-lg text-gray-700">
+                        <div>
+                            <h3 class="text-xl font-semibold">MPU6050 Data</h3>
+                            <p>Initially MPU-6050 will measure the angle difference between the current position of the bot and its normal position. Now, this data is transferred to PID.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">PID Tuning</h3>
+                            <p>PID will take input from MPU-6050 and accordingly calculate the PID value and give variable signals to both motors using interrupt service routine to bring the bot to its normal position and balance it.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Bluetooth Communication</h3>
+                            <p>Once the bot is balanced then we will send different commands ( forward, backward, turn left, turn right, and stop ) to the bot using Bluetooth communication to move the bot in different directions.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">ISR Command</h3>
+                            <p>After receiving a command from Bluetooth, ISR will give different impulses to motors to move the bot according to the given command.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How it works -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">How It Works</h2>
+                    <ol class="list-decimal list-inside space-y-2 text-lg text-gray-700">
+                        <li>Turning the robot on.</li>
+                        <li>The servo motor position is set to a minimum position to keep the robot in a standing position.</li>
+                        <li>Receiving the data from Bluetooth.</li>
+                        <li>Data is collected from the MPU-6050 and robot angle is calculated.</li>
+                        <li>Data from MPU-6050 is filtered (Kalman Filter) to remove noise and make the data stable.</li>
+                        <li>Feeding the data in the PID controller and error is calculated by comparing it with the bot’s current angle and the balance point is delivered as output from the PID controller which will be in a linear data form.</li>
+                        <li>Converting the linear PID balance point into a logarithmic balance point for running the stepper motor at variable speed.</li>
+                        <li>Controlling the left and right motor separately.</li>
+                        <li>
+                            For control:
+                            <ul class="list-disc list-inside ml-6">
+                                <li><b>Turning:</b> Change the balance point of PID for both motors separately.</li>
+                                <li><b>Movement:</b> Change the target angle where the robot has to balance (e.g., forward = increased target angle).</li>
+                            </ul>
+                        </li>
+                        <li>Starting the loop again from 3rd point.</li>
+                    </ol>
+                </div>
+
+                <!-- Features -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Key Features</h2>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li>The robot balances on two wheels.</li>
+                        <li>We can move the robot left, right, forward, and backward via an Android app.</li>
+                        <li>Option to set the PID constants from the onboard knob as well as wirelessly from the Android application.</li>
+                        <li>The robot stands on its own with a servo motor for calibration when powered on.</li>
+                        <li>We can reset the robot wirelessly in case it falls on the ground.</li>
+                        <li>Used PORT control of Arduino for making the pin high and low as it is 60 times faster than the `digitalWrite()` function of Arduino.</li>
+                    </ul>
+                </div>
+                
+                <!-- Gallery -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+                    <p class="text-lg text-gray-700 mb-6">Diagrams and screenshots from the project.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <img src="circuit_diagram.png" alt="Circuit Diagram" class="rounded-lg shadow-lg border">
+                        <img src="app_interface.jpeg" alt="App Interface" class="rounded-lg shadow-lg border">
+                    </div>
+                </div>
+
+                <!-- Problems Faced -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Problems Faced & Solutions</h2>
+                    <p class="text-lg text-gray-700 mb-6">A significant part of this project was troubleshooting. Here are some of the key challenges and how they were solved:</p>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                        <li><b>Problem:</b> MPU-6050 data had a lot of noise.
+                            <br><b>Solution:</b> Implemented a Kalman filter to smooth the data.</li>
+                        <li><b>Problem:</b> Setting PID values by re-uploading code was slow.
+                            <br><b>Solution:</b> Added three onboard knobs (potentiometers) and a feature in the app to set PID constants wirelessly.</li>
+                        <li><b>Problem:</b> Bluetooth connection (ESP32) was unstable.
+                            <br><b>Solution:</b> Traced to undervoltage. Powered the ESP32 directly with 11v from the battery.</li>
+                        <li><b>Problem:</b> Potentiometer values were unstable, causing oscillations.
+                            <br><b>Solution:</b> The servos were drawing too much power from the same 5v regulator. Powered the potentiometers directly from the Arduino's 5v pin for a stable reference.</li>
+                        <li><b>Problem:</b> `TIMER1` interrupt (ISR) clashed with the Servo library.
+                            <br><b>Solution:</b> Switched to `TIMER2` for the stepper motor impulse ISR, as `TIMER1` is used by the Servo library and `TIMER0` is used by `delay()`.</li>
+                        <li><b>Problem:</b> Stepper motor speed was limited.
+                            <br><b>Solution:</b> Tuned the ISR to a 200us pulse for full-speed operation.</li>
+                        <li><b>Problem:</b> Code was getting stuck in `setup()`.
+                            <br><b>Solution:</b> Moved D13 output definition from `setup()` to an `if` statement inside the `loop()` to avoid a reset issue.</li>
+                        <li><b>Problem:</b> PID `Ki` (integral) term was "winding up" and becoming too large, hurting responsiveness.
+                            <br><b>Solution:</b> Clamped the `Ki` error term within a range (-200 to 200).</li>
+                        <li><b>Problem:</b> Android app (MIT App Inventor) wouldn't show Bluetooth devices on newer phones.
+                            <br><b>Solution:</b> Added code to the app to explicitly ask the user for Bluetooth permissions, a requirement for Android 9+.</li>
+                        <li><b>Problem:</b> Needed faster I/O in the ISR.
+                            <br><b>Solution:</b> Used direct PORT control instead of `digitalWrite()`, which is ~60x faster.</li>
+                        <li><b>Problem:</b> Servo would jitter and waste power after startup.
+                            <br><b>Solution:</b> Detached the servo in software after the main loop ran 200 times.</li>
+                    </ol>
+                </div>
+
+                <!-- Real-life Applications -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Real-life Applications</h2>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li>Self-balancing algorithms can be used in rocket propulsion systems (thrust vectoring).</li>
+                        <li>Can be used in warehouses for moving goods (like a Segway).</li>
+                        <li>Can be used for surveillance in any terrain.</li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Resources</h2>
+                    <p class="text-lg text-gray-700 mb-6">Links to the source code and tutorials used during development.</p>
+                    <div class="space-y-4">
+                        <a href="https://github.com/roboclub-mnnit/SelfBalancingBot-2022-23-Project" target="_blank" rel="noopener noreferrer" class="font-medium text-indigo-600 hover:text-indigo-800 transition-colors">Source Code (RoboClub MNNIT)</a>
+                        <p class="text-gray-700"><b class="font-semibold">App Package:</b> Self balancing bot app.zip (Included in GitHub repo)</p>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Tutorials & Theory:</h4>
+                            <ul class="list-disc list-inside ml-4 space-y-2">
+                                <li><a href="https://youtu.be/09Mpkjcr0bo" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800">Stepper Motor Theory</a></li>
+                                <li><a href="https://youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800">Arduino Playlist</a></li>
+                                <li><a href="https://youtu.be/XCyRXMvVSCw" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800">MPU6050 Tutorials</a></li>
+                                <li><a href="https://youtu.be/crw0Hcc67RY" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800">PID Controller Theory</a></li>
+                                <li><a href="https://youtu.be/5HuN9iL-zxU" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800">Kalman Filter Explained</a></li>
+                                <li><a href="https://youtu.be/Uv9UeYUsA8A" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800">Arduino Interrupts (ISR)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+            <p class="text-sm">Built with HTML, Tailwind CSS, and lots of ☕.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
